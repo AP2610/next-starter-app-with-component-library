@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { cn } from '@/lib/utils/cn';
-import { motion, MotionProps } from 'motion/react';
+import { cn } from "../../../lib/utils/cn";
+import { motion, MotionProps } from "motion/react";
 
-type PaddingSizes = 'small' | 'medium' | 'large';
+type PaddingSizes = "small" | "medium" | "large";
 
 type SectionProps = {
   children: React.ReactNode;
@@ -27,13 +27,13 @@ export const Section = ({
   const sectionClasses = cn(
     {
       container: !isFullWidth,
-      'w-full': isFullWidth,
-      'pt-16': paddingTop === 'medium',
-      'pb-16': paddingBottom === 'medium',
-      'pt-8': paddingTop === 'small',
-      'pt-24': paddingTop === 'large',
-      'pb-8': paddingBottom === 'small',
-      'pb-24': paddingBottom === 'large',
+      "w-full": isFullWidth,
+      "pt-16": paddingTop === "medium",
+      "pb-16": paddingBottom === "medium",
+      "pt-8": paddingTop === "small",
+      "pt-24": paddingTop === "large",
+      "pb-8": paddingBottom === "small",
+      "pb-24": paddingBottom === "large",
     },
     className,
   );
@@ -42,7 +42,7 @@ export const Section = ({
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
     transition: { duration: 0.4, delay: 0.2 },
-    viewport: { once: true, margin: '-75px' },
+    viewport: { once: true, margin: "-75px" },
   };
 
   const sectionProps = {

@@ -8,7 +8,6 @@ const prettierConfig = {
   jsxSingleQuote: false,
   arrowParens: 'always',
   plugins: ['prettier-plugin-tailwindcss'],
-  tailwindStylesheet: './src/styles/globals.css',
 };
 
 export default prettierConfig;

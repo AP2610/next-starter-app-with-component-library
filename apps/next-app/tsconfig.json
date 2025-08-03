@@ -1,0 +1,18 @@
+{
+  "extends": "@next-starter-app-monorepo/typescript-config/nextjs.jsonc",
+  "compilerOptions": {
+    "plugins": [{ "name": "next" }],
+    "paths": {
+      "@/*": ["./src/*"],
+      "@styles/*": ["../../packages/tailwind-config/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    "next.config.js",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
