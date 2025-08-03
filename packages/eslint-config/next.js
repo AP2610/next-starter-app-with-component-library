@@ -11,7 +11,7 @@ const compat = new FlatCompat({
 });
 
 const nextJsConfig = [
-  ...base,
+  ...baseConfig,
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
     rules: {
