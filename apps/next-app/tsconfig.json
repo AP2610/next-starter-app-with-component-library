@@ -1,10 +1,10 @@
 {
-  "extends": "@next-starter-app-monorepo/typescript-config/nextjs.jsonc",
+  "extends": "@next-starter-app-monorepo/typescript-config/nextjs.json",
   "compilerOptions": {
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./src/*"],
-      "@styles/*": ["../../packages/tailwind-config/*"]
+      "@styles/*": ["@next-starter-app-monorepo/tailwind-config/styles/*"]
     }
   },
   "include": [

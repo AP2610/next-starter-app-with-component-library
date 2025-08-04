@@ -40,11 +40,6 @@
     // Require explicit checks for array/object property access
     "noUncheckedIndexedAccess": true,
 
-    // Configure path mapping for clean imports
-    "paths": {
-      "@/*": ["./apps/next-app/src/*"],
-    },
-
     // Allow importing JSON files with type safety
     "resolveJsonModule": true,
 

@@ -10,14 +10,46 @@
         "!.next/cache/**"
       ]
     },
-    "check-types": {
-      "dependsOn": [
-        "^check-types"
-      ]
-    },
     "dev": {
       "persistent": true,
       "cache": false
+    },
+    "test": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ]
+    },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": []
+    },
+    "lint:fix": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": []
+    },
+    "format": {
+      "outputs": []
+    },
+    "transit": {
+      "dependsOn": [
+        "^transit"
+      ]
+    },
+    "check-types": {
+      "dependsOn": [
+        "transit"
+      ]
     }
   }
 }

@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "format": "prettier --write .",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "motion": "^12.23.6",
@@ -22,14 +24,13 @@
     "@next-starter-app-monorepo/tailwind-config": "*",
     "@next-starter-app-monorepo/jest-config": "*",
     "@next-starter-app-monorepo/typescript-config": "*",
-    "@next-starter-app-monorepo/shared": "*",
-    "@next-starter-app-monorepo/components": "*",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "jest": "^30.0.4",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "eslint": "^9"
   }
 }
