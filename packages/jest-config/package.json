@@ -1,8 +1,11 @@
 {
-  "name": "@next-starter-app-monorepo/jest-config",
+  "name": "@repo/jest-config",
   "private": true,
   "version": "1.0.0",
-  "main": "./jest.config.ts",
+  "exports": {
+    ".": "./jest.config.ts",
+    "./setup": "./jest.setup.ts"
+  },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",

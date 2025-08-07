@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "@next-starter-app-monorepo/tailwind-config";
+@import 'tailwindcss';
+@import '@repo/tailwind-config';
 
 /* TODO: Test colors via import */
 @theme {

@@ -43,3 +43,5 @@ apps/next-app/next-env.d.ts
 
 # monorepo
 .turbo
+
+**/dist

@@ -16,21 +16,22 @@
     "motion": "^12.23.6",
     "next": "^15.4.5",
     "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-icons": "^5.5.0"
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "@repo/utils": "1.0.0"
   },
   "devDependencies": {
-    "@next-starter-app-monorepo/eslint-config": "*",
-    "@next-starter-app-monorepo/tailwind-config": "*",
-    "@next-starter-app-monorepo/jest-config": "*",
-    "@next-starter-app-monorepo/typescript-config": "*",
+    "@repo/eslint-config": "1.0.0",
+    "@repo/jest-config": "1.0.0",
+    "@repo/tailwind-config": "1.0.0",
+    "@repo/typescript-config": "1.0.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "eslint": "^9",
     "jest": "^30.0.4",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "eslint": "^9"
+    "typescript": "^5.9.2"
   }
 }

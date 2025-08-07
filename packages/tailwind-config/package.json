@@ -1,6 +1,6 @@
 {
-  "name": "@next-starter-app-monorepo/tailwind-config",
-  "version": "0.1.0",
+  "name": "@repo/tailwind-config",
+  "version": "1.0.0",
   "type": "module",
   "private": true,
   "exports": {

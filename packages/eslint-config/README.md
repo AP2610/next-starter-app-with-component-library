@@ -1,4 +1,4 @@
-# @next-starter-app-monorepo/eslint-config
+# @repo/eslint-config
 
 Shared ESLint config for the monorepo.
 
@@ -7,6 +7,6 @@ Shared ESLint config for the monorepo.
 In your `eslint.config.js`:
 
 ```js
-import next from '@next-starter-app-monorepo/eslint-config/next';
+import next from '@repo/eslint-config/next';
 export default next;
 ```

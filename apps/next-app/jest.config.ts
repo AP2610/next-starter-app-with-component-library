@@ -1,14 +1,14 @@
-import nextJest from "next/jest.js";
-import config from "@next-starter-app-monorepo/jest-config";
-import { Config } from "jest";
+import nextJest from 'next/jest.js';
+import config from '@repo/jest-config';
 
 const createJestConfig = nextJest({
-  dir: "./", // path to your Next.js app
+  dir: './', // path to your Next.js app
 });
 
-const nextAppConfig: Config = {
+const nextAppConfig = {
   ...config,
-  setupFilesAfterEnv: ["<rootDir>/../../packages/jest-config/jest.setup.ts"],
+  testMatch: ['<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}', '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}'],
+  setupFilesAfterEnv: ['@repo/jest-config/setup'],
 };
 
 export default createJestConfig(nextAppConfig);

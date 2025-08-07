@@ -6,9 +6,6 @@
 import type { Config } from 'jest';
 
 const config: Config = {
-  // All imported modules in your tests should be mocked automatically
-  // automock: false,
-
   preset: 'ts-jest',
 
   // Automatically clear mock calls, instances, contexts and results before every test
@@ -19,18 +16,19 @@ const config: Config = {
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.test.{js,jsx,ts,tsx}',
+    '!src/**/*.spec.{js,jsx,ts,tsx}',
+    '!src/**/__tests__/**',
     '!**/*.d.ts',
     '!**/*.stories.{js,jsx,ts,tsx}',
-    '!**/*.test.{js,jsx,ts,tsx}',
-    '!**/*.spec.{js,jsx,ts,tsx}',
   ],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: ['/node_modules/'],
+  coveragePathIgnorePatterns: ['/node_modules/', '/.next/', '/dist/', '/coverage/', '/.turbo/'],
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
@@ -45,7 +43,7 @@ const config: Config = {
   testMatch: ['<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}', '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: ['/node_modules/'],
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/dist/', '/coverage/', '/.turbo/'],
 };
 
 export default config;

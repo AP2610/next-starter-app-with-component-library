@@ -1,5 +1,5 @@
 {
-  "name": "@next-starter-app-monorepo/eslint-config",
+  "name": "@repo/eslint-config",
   "version": "1.0.0",
   "type": "module",
   "private": true,
@@ -20,10 +20,10 @@
     "eslint-config-prettier": "^10"
   },
   "peerDependencies": {
-    "react": "^19",
-    "prettier": "^3",
+    "react": "19.1.0",
+    "prettier": "^3.6.2",
     "eslint": "^9",
-    "typescript": "^5",
+    "typescript": "^5.9.2",
     "next": "^15.4.5",
     "react-dom": "^19.1.0"
   }

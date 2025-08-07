@@ -1,4 +1,4 @@
-# @next-starter-app-monorepo/eslint-config
+# @repo/eslint-config
 
 Shared jest config and setup for the monorepo.
 

@@ -1,24 +1,22 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-export type Breakpoints = "sm" | "md" | "lg" | "xl" | "2xl";
+export type Breakpoints = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 
 const twBreakpoints: Record<Breakpoints, string> = {
-  sm: "(min-width: 640px)",
-  md: "(min-width: 768px)",
-  lg: "(min-width: 1024px)",
-  xl: "(min-width: 1280px)",
-  "2xl": "(min-width: 1536px)",
+  sm: '(min-width: 640px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1024px)',
+  xl: '(min-width: 1280px)',
+  '2xl': '(min-width: 1536px)',
 } as const;
 
 /**
  * // Returns true when viewport width >= 768px (md)
  * const isMediumScreenOrLarger = useMediaQuery('md');
  */
-export const useMediaQuery = (
-  mediaQuery: "sm" | "md" | "lg" | "xl" | "2xl" | string,
-) => {
+export const useMediaQuery = (mediaQuery: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | string) => {
   const [matches, setMatches] = useState<boolean>(false);
 
   let query;
@@ -39,10 +37,10 @@ export const useMediaQuery = (
       setMatches(media.matches);
     };
 
-    media.addEventListener("change", handleMediaChange);
+    media.addEventListener('change', handleMediaChange);
 
     return () => {
-      media.removeEventListener("change", handleMediaChange);
+      media.removeEventListener('change', handleMediaChange);
     };
   }, [query]);
 

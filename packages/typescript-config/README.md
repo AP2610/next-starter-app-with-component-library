@@ -1,4 +1,4 @@
-# @next-starter-app-monorepo/eslint-config
+# @repo/eslint-config
 
 Shared typescript config for the monorepo.
 

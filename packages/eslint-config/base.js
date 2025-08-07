@@ -2,6 +2,7 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
 import typescript from '@typescript-eslint/parser';
+import eslintConfigPrettier from 'eslint-config-prettier';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -13,7 +14,7 @@ const compat = new FlatCompat({
 
 const baseConfig = [
   // Extend recommended configurations from TypeScript ESLint and Prettier plugins
-  ...compat.extends('plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended', 'plugin:turbo/recommended'),
+  ...compat.extends('plugin:@typescript-eslint/recommended', 'plugin:turbo/recommended'),
   {
     languageOptions: {
       parser: typescript, // Use TypeScript parser instead of default JavaScript parser
@@ -27,6 +28,8 @@ const baseConfig = [
       'prettier/prettier': 'warn',
       'turbo/no-undeclared-env-vars': 'warn',
     },
+    // Has to come last to override other conflicting rules
+    ...eslintConfigPrettier,
   },
 ];
 
